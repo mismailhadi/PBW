@@ -29,17 +29,21 @@ include "koneksi.php";
         </tr>
         <?php
             $rs = $koneksi->query("SELECT * FROM users");
-            $users = $rs->fetch();
+            $users = $rs->fetchAll();
             foreach($users as $user){
                 
             }
         ?>
         <tr>
-            <td></td>
+            <td><?$i?></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
+
+        <?php
+        
+        ?>
     </table>
 </body>
 </html>
