@@ -1,9 +1,5 @@
 <?php
-session_start();
-IF($_SESSION['isLoggedIn'])
-{
-    header("Location: home.php");
-}
+
 include "koneksi.php";
 
 $uname = $_POST['uname'] ?? '' ;
