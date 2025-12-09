@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['isLoggedIn'])
+    if(isset($_SESSION['isLoggedIn']) AND $_SESSION['isLoggedIn']);
     {
         header("Location: home.php");
     }
