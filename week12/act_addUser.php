@@ -6,10 +6,10 @@
     $cpaswd = $_POST['cpaswd'];
 
     if($paswd == $cpaswd) {
-        $cpaswd = passwword_hash($paswd, PASSWORD_DEFAULT);
+        $cpaswd = password_hash($paswd, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (username, paswd, active) values (?,?,?)";
-        $stmt = $koneksi->prepare($sql);
-        if($stmt->execute([$usr,$cpaswd,1]))
+        $stat = $koneksi->prepare($sql);
+        if($stat->execute([$usr,$cpaswd,1]))
         {
             echo "<script>alert('user baru berhasil ditambah');</script>";
         }

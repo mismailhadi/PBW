@@ -7,8 +7,8 @@
 
     include "koneksi.php";
     $sql = "DELETE FROM users WHERE id=?";
-    $stmt = $koneksi->prepare($sql);
-    if($stmt->execute([$_GET['id']]))
+    $stat = $koneksi->prepare($sql);
+    if($stat->execute([$_GET['id']]))
     {
         header("Location: home.php?page=list");
     }
